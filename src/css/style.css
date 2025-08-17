@@ -1,0 +1,138 @@
+/* =============================
+   Estilos globales
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #87cefa, #ffffff); /* Cielo azul degradado */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =============================
+   Título principal
+============================= */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1e3d59;
+  text-align: center;
+}
+
+/* =============================
+   Contenedor input + botón
+============================= */
+#cityInput, #searchBtn {
+  margin: 10px;
+}
+
+#cityInput {
+  width: 250px;
+}
+
+#searchBtn {
+  cursor: pointer;
+}
+
+/* =============================
+   Resultado del clima
+============================= */
+
+/* Contenedor de resultados */
+#weatherResult {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Tarjeta del clima */
+sl-card {
+  padding: 25px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover */
+sl-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado (nombre de ciudad) */
+sl-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0077b6;
+  font-weight: 700;
+}
+
+/* Temperatura grande */
+sl-card p.temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff6b6b;
+  margin: 10px 0;
+}
+
+/* Condición del clima */
+sl-card p.condition {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Ícono de clima */
+sl-card img.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+sl-card img.weather-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Fondo dinámico según temperatura (opcional con JS) */
+sl-card.hot {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+sl-card.cold {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+/* =============================
+   Alertas
+============================= */
+sl-alert {
+  width: 100%;
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 500px) {
+  #cityInput {
+    width: 180px;
+  }
+}
