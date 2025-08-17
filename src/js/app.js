@@ -39,3 +39,32 @@ function renderWeather(data) {
 
   result.appendChild(card);
 }
+
+window.addEventListener("load", async () => {
+  // Registrar SW
+  if (navigator.serviceWorker) {
+    try {
+      const res = await navigator.serviceWorker.register("./service-worker.js");
+      console.log("Service Worker registrado correctamente", res);
+    } catch (err) {
+      console.error("Ocurrió un error en el registro del service worker", err);
+    }
+  }
+
+});
+
+// Botón para instalar app
+window.addEventListener('load', async () => {
+  const bannerInstall = document.querySelector("#banner-install");
+  bannerInstall.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const res = await deferredPrompt.userChoice;
+      if (res.outcome == 'accepted') {
+        console.log("Usuario aceptó la instalación del prompt");
+      } else {
+        console.log('Rechazó la instalación');
+      }
+    }
+  });
+});

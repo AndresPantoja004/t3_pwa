@@ -4,8 +4,6 @@
   "description": "Aplicación del clima en formato PWA usando Web Components.",
   "type": "module",
   "scripts": {
-    "start": "lite-server",
-    "deploy": "echo 'Usa GitHub Pages o Vercel para desplegar'",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -19,7 +17,6 @@
   "author": "Andres Pantoja",
   "license": "MIT",
   "devDependencies": {
-    "lite-server": "^2.6.1",
     "typescript": "^5.9.2"
   },
   "dependencies": {
