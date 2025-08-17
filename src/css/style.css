@@ -90,7 +90,7 @@ h1 {
 sl-card {
   padding: 25px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  background: linear-gradient(135deg, #acb2b2, #ebebeb);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   width: 100%;
