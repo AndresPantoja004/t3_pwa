@@ -40,6 +40,7 @@ function renderWeather(data) {
   result.appendChild(card);
 }
 
+
 window.addEventListener("load", async () => {
   // Registrar SW
   if (navigator.serviceWorker) {
@@ -53,11 +54,19 @@ window.addEventListener("load", async () => {
 
 });
 
+// Instalar PWA
+window.addEventListener("beforeinstallprompt", (e) => {
+  console.log("Evento de install prevenido");
+  e.preventDefault();
+  deferredPrompt = e;
+});
+
+
 // Botón para instalar app
 window.addEventListener('load', async () => {
   const bannerInstall = document.querySelector("#banner-install");
   bannerInstall.addEventListener('click', async () => {
-    if (deferredPrompt) {
+    if (deferredPrompt || deferredPrompt!=null) {
       deferredPrompt.prompt();
       const res = await deferredPrompt.userChoice;
       if (res.outcome == 'accepted') {
@@ -65,6 +74,8 @@ window.addEventListener('load', async () => {
       } else {
         console.log('Rechazó la instalación');
       }
+    }else{
+      console.log("La app ya esta instalada o no esta disponible esta opcion en tu navegador")
     }
   });
 });

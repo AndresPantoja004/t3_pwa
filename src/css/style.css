@@ -7,17 +7,45 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-body {
+body{
+  padding: 20px;
   background: linear-gradient(to bottom, #87cefa, #ffffff); /* Cielo azul degradado */
   color: #333;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  
 }
 
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.btnInstall::part(base) {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnInstall::part(base):hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.btnInstall::part(base):active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 /* =============================
    Título principal
 ============================= */

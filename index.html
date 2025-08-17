@@ -12,14 +12,19 @@
   
 </head>
 <body>
-  <h1>🌤️ Clima PWA</h1>
-
-  <espe-search-input slot="search" tema="claro" placeholder="Buscar ciudad" ></espe-search-input>
-  <sl-button id="searchBtn">Buscar</sl-button>
-
-
-  <div id="weatherResult"></div>
-  <script type="module" src="src/js/ui.js"></script>
-  <script src="src/js/app.js"></script>
+  <div class="header">
+    <sl-button class="btnInstall" id="banner-install">Instalar App</sl-button>
+  </div>
+  <main>
+    <h1>🌤️ Clima PWA</h1>
+  
+    <espe-search-input slot="search" tema="claro" placeholder="Buscar ciudad" ></espe-search-input>
+    <sl-button id="searchBtn">Buscar clima</sl-button>
+  
+  
+    <div id="weatherResult"></div>
+    <script type="module" src="src/js/ui.js"></script>
+    <script src="src/js/app.js"></script>
+  </main>
 </body>
 </html>
