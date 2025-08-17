@@ -1,6 +1,6 @@
 # 🌤️ Clima PWA
 
-
+![Vista Principal](docs/view_inicial.png)
 
 ## Descripción
 
@@ -138,13 +138,7 @@ MIT © Andrés Pantoja
 
 ---
 
-## Imágenes de la app
 
-- **Pantalla principal / Home:**
-
-
-
-- **Búsqueda de ciudad / Resultado del clima:**
 
 
 
