@@ -40,6 +40,10 @@ Puedes ver la app desplegada en Netlify aquí: [Clima PWA](https://playful-grani
 
 ---
 
+## Componente espe-search 
+Se hizo uso del componente espesearch desarrollado por el grupo de Alexander Quizpe el cual estaba en typescript pero para adaptarlo al desarrollo se reeconvritio a js gracias a npm run build el componente va a estar en la carpeta "src/components/" 
+
+![Componente search](docs/componente_search.png)
 ## Instalación
 
 Clona el proyecto:
@@ -129,6 +133,8 @@ clima-pwa/
 - `typescript` ^5.x
 - `vite` ^7.x
 - `@shoelace-style/shoelace` ^2.x
+
+
 
 ---
 
