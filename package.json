@@ -2,10 +2,9 @@
   "name": "clima-pwa",
   "version": "1.0.0",
   "description": "Aplicación del clima en formato PWA usando Web Components.",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "keywords": [
